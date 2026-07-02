@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic homepage — teaching, publications, and contact information.">
+  <meta name="author" content="YOUR NAME">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- EDIT: your name -->
+  <title>Your Name</title>
+
+  <link href="theme.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======================================================================
+       Header: name, title, affiliation, contact links, photo
+       ====================================================================== -->
+  <header>
+    <div class="container header-inner">
+      <div>
+        <h1>Your Name</h1>
+        <p class="role">
+          Your Title (e.g. Assistant Professor)<br>
+          Your Department<br>
+          Your University
+        </p>
+        <div class="coordinates">
+          <span>&#9993; you@university.edu</span>
+          <span>&#9742; +1 (555) 000-0000</span>
+          <a href="https://maps.google.com">&#9906; Office 123, Building Name</a>
+          <a href="https://github.com/YOUR-USERNAME">GitHub</a>
+          <a href="https://scholar.google.com/citations?user=YOUR-ID">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/YOUR-PROFILE">LinkedIn</a>
+        </div>
+      </div>
+      <div id="portrait">
+        <!-- EDIT: replace images/portrait.svg with your photo,
+             e.g. <img src="images/me.jpg" alt="Your Name"> -->
+        <img src="images/portrait.svg" alt="Portrait of Your Name">
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       Navigation
+       ====================================================================== -->
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ==================================================================
+         Epigraph — pick the quote you like best; the alternatives are in
+         the comments below. Swap freely.
+         ================================================================== -->
+    <blockquote class="epigraph">
+      <p>&ldquo;Perfection is achieved, not when there is nothing more to add,
+        but when there is nothing left to take away.&rdquo;</p>
+      <footer>Antoine de Saint-Exup&eacute;ry</footer>
+    </blockquote>
+
+    <!-- Alternative quotes:
+
+    On truth in beauty:
+      "'Beauty is truth, truth beauty,' — that is all
+       ye know on earth, and all ye need to know."
+      — John Keats, "Ode on a Grecian Urn"
+
+    On rebirth and resilience:
+      "And the day came when the risk to remain tight in a bud was more
+       painful than the risk it took to blossom."
+      — Ana&iuml;s Nin (attributed)
+
+      "What the caterpillar calls the end of the world,
+       the master calls a butterfly."
+      — Richard Bach
+    -->
+
+    <!-- ==================================================================
+         About
+         ================================================================== -->
+    <section id="about-section">
+      <a class="anchor" id="about"></a>
+      <h2>About</h2>
+      <p>
+        <!-- EDIT: 2–3 sentence bio. Who you are, where you are, what you care about. -->
+        I am a [title] at [university], where I teach [subject area].
+        My work centers on [one-sentence description of your focus].
+        Placeholder text — replace with your own introduction.
+      </p>
+      <p>
+        <!-- EDIT: a sentence or two on your teaching philosophy, since teaching
+             is the emphasis of this site. -->
+        I believe that [a short statement of your teaching philosophy —
+        e.g. "the best courses strip a subject to its essential ideas and let
+        students rebuild it for themselves"].
+      </p>
+    </section>
+
+    <!-- ==================================================================
+         Teaching — the featured section. Current/recent courses as cards,
+         with a link to the full history on teaching.html.
+         ================================================================== -->
+    <section id="teaching-section">
+      <a class="anchor" id="teaching"></a>
+      <h2>Teaching</h2>
+      <ul class="course-list">
+        <li>
+          <span class="course-code">COURSE 101</span>
+          <a class="course-title" href="#">Introduction to [Subject]</a>
+          <span class="course-term">Fall 2026 &middot; syllabus &middot; materials</span>
+        </li>
+        <li>
+          <span class="course-code">COURSE 201</span>
+          <a class="course-title" href="#">[Second Course Title]</a>
+          <span class="course-term">Spring 2026 &middot; syllabus &middot; materials</span>
+        </li>
+        <li>
+          <span class="course-code">COURSE 350</span>
+          <a class="course-title" href="#">[Seminar or Elective Title]</a>
+          <span class="course-term">Fall 2025 &middot; syllabus &middot; materials</span>
+        </li>
+      </ul>
+      <p>
+        A full semester-by-semester history, along with course materials and
+        my teaching philosophy, is on the <a href="teaching.html">teaching page</a>.
+      </p>
+    </section>
+
+    <!-- ==================================================================
+         Publications
+         ================================================================== -->
+    <section id="publications-section">
+      <a class="anchor" id="publications"></a>
+      <h2>Publications</h2>
+      <p>
+        See <a href="https://scholar.google.com/citations?user=YOUR-ID">Google Scholar</a>
+        for a full, up-to-date listing.
+      </p>
+      <ol class="pub-list">
+        <li>
+          <span class="pub-title">Title of a Representative Paper</span><br>
+          A. Author, B. Author, and Your Name.<br>
+          <span class="pub-venue">Venue Name, 2026.</span>
+          [<a href="files/paper1.pdf">pdf</a>]
+        </li>
+        <li>
+          <span class="pub-title">Title of Another Paper</span><br>
+          Your Name and C. Collaborator.<br>
+          <span class="pub-venue">Journal Name, 2025.</span>
+          [<a href="files/paper2.pdf">pdf</a>]
+        </li>
+      </ol>
+    </section>
+
+    <!-- ==================================================================
+         News
+         ================================================================== -->
+    <section id="news-section">
+      <a class="anchor" id="news"></a>
+      <h2>News</h2>
+      <ul class="news-list">
+        <li><span class="news-date">Jul 2026</span> Placeholder — a recent announcement goes here.</li>
+        <li><span class="news-date">May 2026</span> Placeholder — a talk, award, or new course.</li>
+        <li><span class="news-date">Jan 2026</span> Placeholder — older news item.</li>
+      </ul>
+    </section>
+
+    <!-- ==================================================================
+         Contact
+         ================================================================== -->
+    <section id="contact-section">
+      <a class="anchor" id="contact"></a>
+      <h2>Contact</h2>
+      <p>
+        The best way to reach me is by email at
+        <a href="mailto:you@university.edu">you@university.edu</a>.
+        Office hours for current students are listed on each course page.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 Your Name &middot; Last updated July 2026
+    </div>
+  </footer>
+
+</body>
+
+</html>
