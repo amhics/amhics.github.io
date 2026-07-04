@@ -4,200 +4,254 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic homepage — teaching, publications, and contact information.">
-  <meta name="author" content="YOUR NAME">
+  <meta name="description" content="Academic homepage — teaching, research, and publications.">
+  <meta name="author" content="Ahmed M. Hamza">
+
+  <title>Ahmed M. Hamza, Ph.D</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-  <!-- EDIT: your name -->
-  <title>Ahmed M. Hamza, Ph.D</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,500&family=Libre+Franklin:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
   <link href="theme.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ======================================================================
-       Header: name, title, affiliation, contact links, photo
-       ====================================================================== -->
-  <header>
-    <div class="container header-inner">
-      <div>
-        <h1>Your Name</h1>
-        <p class="role">
-          Teaching Associate Professor<br>
-          Computer Science Dept.<br>
-          University of Colorado at Boulder
-        </p>
-        <div class="coordinates">
-          <span>&#9993; ahmed [[[dot]]] hamza [[[@]]] colorado.edu</span>
-          <a href="https://maps.google.com">&#9906; Office ECOT 618</a>
-          <a href="https://github.com/YOUR-USERNAME">amhics</a>
-
-        </div>
-      </div>
-      <div id="portrait">
-        <!-- EDIT: replace images/portrait.svg with your photo,
-             e.g. <img src="images/me.jpg" alt="Your Name"> -->
-        <img src="images/portrait.svg" alt="Portrait of Your Name">
-      </div>
-    </div>
-  </header>
-
-  <!-- ======================================================================
-       Navigation
-       ====================================================================== -->
-  <nav>
-    <div class="container">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main class="container">
+  <div class="page">
 
     <!-- ==================================================================
-         Epigraph — pick the quote you like best; the alternatives are in
-         the comments below. Swap freely.
+         Epigraph — same quote as the light-theme site; swap freely.
          ================================================================== -->
-    <blockquote class="epigraph">
-      <p>&ldquo;I will not perish in the field; I will be born again to take up
-        the halberd seven more times.&rdquo;</p>
-      <footer>Kuribayashi Tadamichi</footer>
-    </blockquote>
+    <figure class="epigraph">
+      <blockquote>&ldquo;..I will not perish in the field; I will be born again to take up
+        the halberd seven more times.&rdquo;</blockquote>
+      <figcaption>&mdash; Kuribayashi Tadamichi</figcaption>
+    </figure>
 
-    <!-- Alternative quotes:
-
-    On truth in beauty:
-      "'Beauty is truth, truth beauty,' — that is all
-       ye know on earth, and all ye need to know."
-      — John Keats, "Ode on a Grecian Urn"
-
-    On rebirth and resilience:
-      "And the day came when the risk to remain tight in a bud was more
-       painful than the risk it took to blossom."
-      — Ana&iuml;s Nin (attributed)
-
-      "What the caterpillar calls the end of the world,
-       the master calls a butterfly."
-      — Richard Bach
-    -->
+    <!-- ==================================================================
+         Header: name, title, affiliation, bio line, contact, photo
+         ================================================================== -->
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Ahmed M. Hamza, Ph.D</h1>
+        <p class="role">
+          Teaching Associate Professor · Department of Computer Science ·
+          <a href="https://www.colorado.edu/cs/">University of Colorado Boulder</a>
+        </p>
+        <p class="bio">
+          I teach broadly in Computer Science; my quite varied background is in
+          Security, Reinforcement Learning algorithms, chem-informatics, and
+          Digital Signal Processing (video codecs).
+        </p>
+        <p class="mono-email">ahmed [[dot]] hamza \at/ colorado \dot\ edu</p>
+      </div>
+      <!-- EDIT: replace images/portrait.png with your photo (jpg/png both fine) -->
+      <div class="headshot">
+        <img src="images/portrait.png" alt="Portrait of Ahmed M. Hamza">
+      </div>
+    </header>
 
     <!-- ==================================================================
          About
          ================================================================== -->
-    <section id="about-section">
-      <a class="anchor" id="about"></a>
-      <h2>About</h2>
+    <section id="about">
       <p>
-        <!-- EDIT: 2–3 sentence bio. Who you are, where you are, what you care about. -->
-        I am a [title] at [university], where I teach [subject area].
-        My work centers on [one-sentence description of your focus].
-        Placeholder text — replace with your own introduction.
-      </p>
-      <p>
-        <!-- EDIT: a sentence or two on your teaching philosophy, since teaching
-             is the emphasis of this site. -->
-        I believe that [a short statement of your teaching philosophy —
-        e.g. "the best courses strip a subject to its essential ideas and let
-        students rebuild it for themselves"].
+        My interests sit at the intersection of AI and Computing Security. I try
+        to answer questions like "How can this model misbehave, and what
+        does it look like when it does?" as well as more general questions
+        of capability — "can a system learn to act in a useful way in
+        adversarial autonomous settings?". My teaching is heavily within
+        systems programming and adversarial cybersecurity + reverse engineering.
       </p>
     </section>
 
     <!-- ==================================================================
-         Teaching — the featured section. Current/recent courses as cards,
-         with a link to the full history on teaching.html.
+         Teaching
          ================================================================== -->
-    <section id="teaching-section">
-      <a class="anchor" id="teaching"></a>
+    <section id="teaching">
       <h2>Teaching</h2>
-      <ul class="course-list">
-        <li>
-          <span class="course-code">COURSE 101</span>
-          <a class="course-title" href="#">Introduction to [Subject]</a>
-          <span class="course-term">Fall 2026 &middot; syllabus &middot; materials</span>
-        </li>
-        <li>
-          <span class="course-code">COURSE 201</span>
-          <a class="course-title" href="#">[Second Course Title]</a>
-          <span class="course-term">Spring 2026 &middot; syllabus &middot; materials</span>
-        </li>
-        <li>
-          <span class="course-code">COURSE 350</span>
-          <a class="course-title" href="#">[Seminar or Elective Title]</a>
-          <span class="course-term">Fall 2025 &middot; syllabus &middot; materials</span>
-        </li>
-      </ul>
-      <p>
-        A full semester-by-semester history, along with course materials and
-        my teaching philosophy, is on the <a href="teaching.html">teaching page</a>.
-      </p>
-    </section>
-
-    <!-- ==================================================================
-         Publications
-         ================================================================== -->
-    <section id="publications-section">
-      <a class="anchor" id="publications"></a>
-      <h2>Publications</h2>
-      <p>
-        See <a href="https://scholar.google.com/citations?user=YOUR-ID">Google Scholar</a>
-        for a full, up-to-date listing.
-      </p>
-      <ol class="pub-list">
-        <li>
-          <span class="pub-title">Title of a Representative Paper</span><br>
-          A. Author, B. Author, and Your Name.<br>
-          <span class="pub-venue">Venue Name, 2026.</span>
-          [<a href="files/paper1.pdf">pdf</a>]
-        </li>
-        <li>
-          <span class="pub-title">Title of Another Paper</span><br>
-          Your Name and C. Collaborator.<br>
-          <span class="pub-venue">Journal Name, 2025.</span>
-          [<a href="files/paper2.pdf">pdf</a>]
-        </li>
-      </ol>
+      <div class="rule"></div>
+      <div class="course-list">
+        <div class="course-row">
+          <span class="mono tag">CSCI 5403</span>
+          <div>
+            <a class="course-title" href="#">Introduction to Computing Security and Cryptography</a>
+            <div class="course-term">Fall 2026</div>
+          </div>
+        </div>
+        <div class="course-row">
+          <span class="mono tag">CSCI 5403</span>
+          <div>
+            <a class="course-title" href="#">Introduction to Computing Security and Cryptography</a>
+            <div class="course-term">Spring 2026</div>
+          </div>
+        </div>
+        <div class="course-row">
+          <span class="mono tag">CSCI 7000</span>
+          <div>
+            <a class="course-title" href="#">Advanced Topics: Reverse Engineering and Binary Analysis</a>
+            <div class="course-term">Fall 2025</div>
+          </div>
+        </div>
+        <div class="course-row">
+          <span class="mono tag">CSCI 5413</span>
+          <div>
+            <a class="course-title" href="#">Security and Ethical Hacking</a>
+            <div class="course-term">Fall 2025</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ==================================================================
          News
          ================================================================== -->
-    <section id="news-section">
-      <a class="anchor" id="news"></a>
+    <section id="news">
       <h2>News</h2>
-      <ul class="news-list">
-        <li><span class="news-date">Jul 2026</span> Placeholder — a recent announcement goes here.</li>
-        <li><span class="news-date">May 2026</span> Placeholder — a talk, award, or new course.</li>
-        <li><span class="news-date">Jan 2026</span> Placeholder — older news item.</li>
-      </ul>
+      <div class="rule"></div>
+      <div class="news-list">
+        <div class="news-row">
+          <span class="mono news-date">Jun 2026</span>
+          <p>Paper on prompt-injection defenses accepted at USENIX Security 2026. [placeholder]</p>
+        </div>
+        <div class="news-row">
+          <span class="mono news-date">Apr 2026</span>
+          <p>Awarded NSF grant for research on training-data supply-chain integrity. [placeholder]</p>
+        </div>
+        <div class="news-row">
+          <span class="mono news-date">Jan 2026</span>
+          <p>Serving on the program committee for IEEE S&amp;P 2027. [placeholder]</p>
+        </div>
+        <div class="news-row">
+          <span class="mono news-date">Sep 2025</span>
+          <p>Joined the University of Colorado Boulder as faculty in Computer Science. [placeholder]</p>
+        </div>
+      </div>
     </section>
 
     <!-- ==================================================================
-         Contact
+         Publications
          ================================================================== -->
-    <section id="contact-section">
-      <a class="anchor" id="contact"></a>
-      <h2>Contact</h2>
-      <p>
-        The best way to reach me is by email at
-        <a href="mailto:you@university.edu">you@university.edu</a>.
-        Office hours for current students are listed on each course page.
-      </p>
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="rule"></div>
+      <p class="mono placeholder-note">[placeholder papers — send me your CV or bib file to fill these in]</p>
+
+      <div class="topic-filter" id="topic-filter">
+        <button class="topic-btn active" data-topic="All">All</button>
+        <button class="topic-btn" data-topic="LLM Security">LLM Security</button>
+        <button class="topic-btn" data-topic="Robustness">Robustness</button>
+        <button class="topic-btn" data-topic="Data Poisoning">Data Poisoning</button>
+        <button class="topic-btn" data-topic="Privacy">Privacy</button>
+      </div>
+
+      <div class="pub-list" id="pub-list">
+        <article class="pub" data-topic="LLM Security">
+          <span class="mono pub-year">2026</span>
+          <div>
+            <a class="pub-title" href="#">Placeholder: Detecting Indirect Prompt Injection in Tool-Using Agents</a>
+            <div class="pub-authors">A. M. Hamza, First Coauthor, Second Coauthor</div>
+            <div class="pub-meta mono">
+              <span class="pub-venue">USENIX Security</span>
+              <a href="#">pdf</a>
+              <a href="#">arXiv</a>
+              <span class="pub-topic-tag">LLM Security</span>
+            </div>
+          </div>
+        </article>
+        <article class="pub" data-topic="Data Poisoning">
+          <span class="mono pub-year">2026</span>
+          <div>
+            <a class="pub-title" href="#">Placeholder: Provenance Tracking for Web-Scale Training Corpora</a>
+            <div class="pub-authors">First Student, A. M. Hamza</div>
+            <div class="pub-meta mono">
+              <span class="pub-venue">IEEE S&amp;P</span>
+              <a href="#">pdf</a>
+              <a href="#">arXiv</a>
+              <span class="pub-topic-tag">Data Poisoning</span>
+            </div>
+          </div>
+        </article>
+        <article class="pub" data-topic="Privacy">
+          <span class="mono pub-year">2025</span>
+          <div>
+            <a class="pub-title" href="#">Placeholder: Membership Inference Under Realistic Deployment Constraints</a>
+            <div class="pub-authors">A. M. Hamza, Another Coauthor</div>
+            <div class="pub-meta mono">
+              <span class="pub-venue">CCS</span>
+              <a href="#">pdf</a>
+              <a href="#">arXiv</a>
+              <span class="pub-topic-tag">Privacy</span>
+            </div>
+          </div>
+        </article>
+        <article class="pub" data-topic="Robustness">
+          <span class="mono pub-year">2025</span>
+          <div>
+            <a class="pub-title" href="#">Placeholder: Certified Robustness for Multimodal Classifiers</a>
+            <div class="pub-authors">Student Name, A. M. Hamza, Collaborator Name</div>
+            <div class="pub-meta mono">
+              <span class="pub-venue">NeurIPS</span>
+              <a href="#">pdf</a>
+              <a href="#">arXiv</a>
+              <span class="pub-topic-tag">Robustness</span>
+            </div>
+          </div>
+        </article>
+        <article class="pub" data-topic="Data Poisoning">
+          <span class="mono pub-year">2024</span>
+          <div>
+            <a class="pub-title" href="#">Placeholder: Backdoors in Fine-Tuned Foundation Models: A Measurement Study</a>
+            <div class="pub-authors">A. M. Hamza, Coauthor Name</div>
+            <div class="pub-meta mono">
+              <span class="pub-venue">NDSS</span>
+              <a href="#">pdf</a>
+              <a href="#">arXiv</a>
+              <span class="pub-topic-tag">Data Poisoning</span>
+            </div>
+          </div>
+        </article>
+        <article class="pub" data-topic="Robustness">
+          <span class="mono pub-year">2024</span>
+          <div>
+            <a class="pub-title" href="#">Placeholder: Adversarial Examples Beyond the Lp Ball</a>
+            <div class="pub-authors">A. M. Hamza, Coauthor Name</div>
+            <div class="pub-meta mono">
+              <span class="pub-venue">ICML</span>
+              <a href="#">pdf</a>
+              <a href="#">arXiv</a>
+              <span class="pub-topic-tag">Robustness</span>
+            </div>
+          </div>
+        </article>
+        <article class="pub" data-topic="Privacy">
+          <span class="mono pub-year">2023</span>
+          <div>
+            <a class="pub-title" href="#">Placeholder: Auditing Differential Privacy Claims in Deployed ML APIs</a>
+            <div class="pub-authors">Coauthor Name, A. M. Hamza</div>
+            <div class="pub-meta mono">
+              <span class="pub-venue">PETS</span>
+              <a href="#">pdf</a>
+              <a href="#">arXiv</a>
+              <span class="pub-topic-tag">Privacy</span>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-  </main>
+    <!-- ==================================================================
+         Contact / footer
+         ================================================================== -->
+    <footer id="contact">
+      <div>ahmed [[dot]] hamza \at/ colorado \dot\ edu · ECOT 618, 1111 Engineering Dr, Boulder CO 80309</div>
+      <div>&copy; 2026 Ahmed M. Hamza</div>
+    </footer>
 
-  <footer>
-    <div class="container">
-      &copy; 2026 Your Name &middot; Last updated July 2026
-    </div>
-  </footer>
+  </div>
 
+  <script src="app.js"></script>
 </body>
 
 </html>

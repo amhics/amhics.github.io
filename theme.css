@@ -1,257 +1,340 @@
 /* ==========================================================================
-   Academic site theme
-   Change the colors and fonts for the whole site here.
+   Academic site theme — dark variant, matched to the Claude Design source
+   (Academic Homepage.dc.html). Colors/fonts are the exact values from that
+   file's inline styles.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
-
 :root {
-  --accent: #990000;          /* header / accent color (crimson) */
-  --accent-dark: #6e0000;
-  --ink: #212529;             /* body text */
-  --muted: #6c757d;
-  --rule: #dee2e6;            /* hairline borders */
-  --bg: #ffffff;
-  --nav-bg: #f8f9fa;
-  --maxwidth: 60rem;
+  --bg: #11151b;
+  --ink: #dfe4eb;
+  --ink-bright: #eff3f8;
+  --ink-dim: #c3cbd6;
+  --muted: #9ba5b3;
+  --muted-dim: #8d97a5;
+  --muted-dimmer: #7f8998;
+  --muted-dimmest: #6b7688;
+  --accent: #6ea8e8;
+  --rule: rgba(255, 255, 255, .09);
+  --card-bg: rgba(255, 255, 255, .03);
+  --card-border: rgba(255, 255, 255, .07);
+  --maxwidth: 780px;
 }
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
-
 body {
   margin: 0;
-  font-family: 'Roboto', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--ink);
   background: var(--bg);
+  color: var(--ink);
+  font-family: 'Libre Franklin', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 17px;
+  line-height: 1.65;
 }
 
-.container {
+a { color: inherit; }
+
+::selection { background: rgba(110, 168, 232, .3); }
+
+.mono { font-family: 'Source Code Pro', monospace; }
+
+.page {
   max-width: var(--maxwidth);
   margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-a { color: var(--accent); }
-a:hover { color: var(--accent-dark); }
-
-/* --------------------------------------------------------------------------
-   Header bar
-   -------------------------------------------------------------------------- */
-
-header {
-  background-color: var(--accent);
-  color: #fff;
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 1.5rem 0;
-}
-
-.header-inner h1 {
-  margin: 0 0 0.25rem;
-  font-size: 1.9rem;
-  font-weight: 500;
-}
-
-.header-inner .role {
-  margin: 0 0 0.75rem;
-  font-size: 1.1rem;
-  font-weight: 300;
-}
-
-.coordinates {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 1rem;
-  font-size: 0.95rem;
-}
-
-.coordinates a,
-.coordinates span {
-  color: #fff;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.coordinates a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-#portrait img {
-  display: block;
-  width: 144px;
-  height: 144px;
-  object-fit: cover;
-  border-radius: 4px;
-  border: 2px solid rgba(255, 255, 255, 0.6);
+  padding: 72px 28px 96px;
 }
 
 /* --------------------------------------------------------------------------
-   Navigation
+   Epigraph
    -------------------------------------------------------------------------- */
 
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: var(--nav-bg);
+.epigraph {
+  margin: 0 0 56px;
+  padding: 0 0 24px;
   border-bottom: 1px solid var(--rule);
-}
-
-nav ul {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0 1.5rem;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  margin-left: auto;
+  max-width: 420px;
+}
+
+.epigraph blockquote {
   margin: 0;
-  padding: 0.6rem 0;
-  list-style: none;
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--muted);
 }
 
-nav a {
-  color: var(--ink);
-  text-decoration: none;
-  font-weight: 400;
+.epigraph figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  font-family: 'Source Code Pro', monospace;
+  color: var(--muted-dimmest);
 }
 
-nav a:hover,
-nav a.active {
+/* --------------------------------------------------------------------------
+   Header / hero
+   -------------------------------------------------------------------------- */
+
+.hero {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.hero-text { flex: 1; min-width: 300px; }
+
+.hero h1 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+  color: var(--ink-bright);
+}
+
+.hero .role {
+  margin: 0 0 14px;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.hero .role a {
   color: var(--accent);
-  font-weight: 500;
+  text-decoration: none;
 }
 
-/* Anchor targets land below the sticky nav */
-.anchor {
+.hero .role a:hover { text-decoration: underline; }
+
+.hero .bio {
+  margin: 0 0 18px;
+  color: var(--ink-dim);
+}
+
+.hero .mono-email {
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Source Code Pro', monospace;
+  color: var(--accent);
+}
+
+.headshot {
+  width: 148px;
+  height: 148px;
+  flex: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .04);
+}
+
+.headshot img {
   display: block;
-  position: relative;
-  top: -3.5rem;
-  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* --------------------------------------------------------------------------
    Sections
    -------------------------------------------------------------------------- */
 
-main { padding-bottom: 3rem; }
+section { margin-top: 56px; }
 
-section { margin-top: 2.5rem; }
+#about { margin-top: 52px; }
 
-section > h2 {
-  margin: 0 0 0.75rem;
-  font-size: 1.4rem;
-  font-weight: 500;
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid var(--accent);
-}
+#about p { margin: 0; color: var(--ink-dim); }
 
-/* Epigraph / quote */
-.epigraph {
-  margin: 2.5rem auto 0;
-  max-width: 38rem;
-  text-align: center;
+section h2 {
   font-family: 'Lora', Georgia, serif;
-  font-style: italic;
-  font-size: 1.15rem;
-  color: var(--muted);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--ink-bright);
 }
 
-.epigraph footer {
-  margin-top: 0.5rem;
-  font-style: normal;
-  font-size: 0.95rem;
+.rule {
+  height: 2px;
+  width: 44px;
+  background: var(--accent);
+  margin-bottom: 22px;
 }
 
-.epigraph footer::before { content: "— "; }
+/* Publications' divider sits tighter to the placeholder note below it */
+#publications .rule {
+  margin-bottom: 18px;
+}
 
-/* Course cards (teaching highlights) */
+/* Teaching */
 .course-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-  gap: 1rem;
-  padding: 0;
-  margin: 1rem 0 0;
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.course-list li {
-  border: 1px solid var(--rule);
-  border-left: 4px solid var(--accent);
-  border-radius: 4px;
-  padding: 0.9rem 1rem;
+.course-row {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  padding: 16px 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
 }
 
-.course-list .course-code {
-  font-size: 0.85rem;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+.course-row .tag {
+  font-size: 14px;
+  color: var(--accent);
+  flex: none;
+  width: 88px;
 }
 
-.course-list .course-title {
-  display: block;
-  font-weight: 500;
-  margin: 0.15rem 0;
+.course-title {
+  font-weight: 600;
+  color: #e6ebf2;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.course-list .course-term {
-  font-size: 0.9rem;
-  color: var(--muted);
+.course-title:hover { color: var(--accent); }
+
+.course-term {
+  font-size: 14.5px;
+  color: var(--muted-dim);
+  margin-top: 2px;
 }
 
-/* Semester-by-semester history (teaching page) */
-dl.history dt {
-  font-weight: 500;
-  margin-top: 0.9rem;
+/* News */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-dl.history dd {
-  margin: 0.1rem 0 0;
-  color: var(--muted);
+.news-row {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+}
+
+.news-row .news-date {
+  font-size: 13.5px;
+  color: var(--muted-dimmer);
+  flex: none;
+  width: 88px;
+}
+
+.news-row p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--ink-dim);
 }
 
 /* Publications */
-.pub-list { padding-left: 0; list-style: none; }
-
-.pub-list li {
-  margin-bottom: 1rem;
-  padding-left: 1rem;
-  border-left: 3px solid var(--rule);
+.placeholder-note {
+  margin: 0 0 16px;
+  font-size: 13.5px;
+  color: var(--muted-dimmer);
 }
 
-.pub-title { font-weight: 500; }
+.topic-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+}
 
-.pub-venue { font-style: italic; color: var(--muted); }
+.topic-btn {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  background: transparent;
+  color: var(--muted-dim);
+}
 
-/* News */
-.news-list { padding-left: 0; list-style: none; }
-
-.news-list li { margin-bottom: 0.6rem; }
-
-.news-date {
-  display: inline-block;
-  min-width: 6.5rem;
-  font-weight: 500;
+.topic-btn.active {
+  border-color: var(--accent);
+  background: rgba(110, 168, 232, .16);
   color: var(--accent);
 }
 
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.pub {
+  display: flex;
+  gap: 18px;
+}
+
+.pub-year {
+  font-size: 13.5px;
+  color: var(--muted-dimmer);
+  flex: none;
+  width: 88px;
+  padding-top: 3px;
+}
+
+.pub-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 18.5px;
+  font-weight: 600;
+  color: #e6ebf2;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.pub-title:hover { color: var(--accent); }
+
+.pub-authors {
+  font-size: 15px;
+  color: var(--muted-dim);
+  margin-top: 4px;
+}
+
+.pub-meta {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-top: 6px;
+  font-size: 13.5px;
+}
+
+.pub-meta .pub-venue { color: var(--accent); }
+
+.pub-meta a { color: var(--muted-dimmer); }
+
+.pub-topic-tag {
+  color: var(--muted-dimmest);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 4px;
+  padding: 1px 7px;
+  font-size: 12px;
+}
+
 /* --------------------------------------------------------------------------
-   Footer
+   Contact / footer
    -------------------------------------------------------------------------- */
 
-body > footer {
+footer#contact {
+  margin-top: 72px;
+  padding-top: 26px;
   border-top: 1px solid var(--rule);
-  padding: 1.25rem 0 2rem;
-  font-size: 0.9rem;
-  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14.5px;
+  color: var(--muted-dimmer);
 }
 
 /* --------------------------------------------------------------------------
@@ -259,7 +342,6 @@ body > footer {
    -------------------------------------------------------------------------- */
 
 @media (max-width: 600px) {
-  .header-inner { flex-direction: column-reverse; text-align: center; }
-  .coordinates { justify-content: center; }
-  .news-date { display: block; }
+  .epigraph { align-items: center; text-align: center; margin: 0 auto 40px; max-width: 100%; }
+  .hero { flex-direction: column-reverse; }
 }

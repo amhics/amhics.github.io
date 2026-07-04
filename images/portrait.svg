@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="288" height="288" viewBox="0 0 288 288">
-  <!-- Placeholder portrait — replace with your photo (e.g. images/me.jpg)
-       and update the <img> tags in index.html and teaching.html. -->
-  <rect width="288" height="288" fill="#e9ecef"/>
-  <circle cx="144" cy="110" r="52" fill="#adb5bd"/>
-  <path d="M 48 288 Q 48 196 144 196 Q 240 196 240 288 Z" fill="#adb5bd"/>
-  <text x="144" y="270" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#495057">your photo here</text>
-</svg>
