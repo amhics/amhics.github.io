@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Georgetown-inspired monogram favicon (navy + gray) — change the letter to taste. -->
-  <rect width="32" height="32" rx="6" fill="#041E42"/>
-  <text x="16" y="23" text-anchor="middle" font-family="Georgia, serif" font-size="19" fill="#ffffff">G</text>
-  <rect x="4" y="26" width="24" height="2" fill="#8D817C"/>
-</svg>
