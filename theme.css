@@ -26,7 +26,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: 'Libre Franklin', 'Helvetica Neue', sans-serif;
+  /* Helvetica Neue on Apple platforms; Inter (webfont) elsewhere — not Arial */
+  font-family: 'Helvetica Neue', 'Inter', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 17px;
   line-height: 1.65;
@@ -90,9 +91,11 @@ a { color: inherit; }
 .hero-text { flex: 1; min-width: 300px; }
 
 .hero h1 {
-  font-family: 'Libre Franklin', 'Helvetica Neue', sans-serif;
-  font-size: 32px;
+  font-family: 'Helvetica Neue', 'Inter', Helvetica, sans-serif;
+  /* fluid size keeps the name on one line down to 320px viewports */
+  font-size: clamp(23px, 7.5vw, 32px);
   font-weight: 300;
+  white-space: nowrap;
   margin: 0 0 6px;
   letter-spacing: -0.01em;
   color: var(--ink-bright);
@@ -249,7 +252,7 @@ section h2 {
 }
 
 .topic-btn {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: inherit;
   font-size: 14px;
   cursor: pointer;
   padding: 5px 13px;
